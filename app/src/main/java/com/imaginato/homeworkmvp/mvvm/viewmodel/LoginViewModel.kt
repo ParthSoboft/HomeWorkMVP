@@ -14,7 +14,7 @@ class LoginViewModel : ViewModel() {
 
     init {
         loginData = loginRepository.getLoginLiveData()
-        message = MutableLiveData()
+        message=loginRepository.message
     }
 
     fun performLogin(loginRequest: LoginRequest, headers: HashMap<String, String>) {
